@@ -20,14 +20,14 @@ public class ComparatorUtil {
 					Comparable value2 = (Comparable) m.invoke(b2);
 					result = value1.compareTo(value2);
 				} catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
-					e.printStackTrace();
+					System.out.println(e.getMessage());
 				}
 
 				return result;
 			};
 
 		} catch (NoSuchMethodException | SecurityException e1) {
-			e1.printStackTrace();
+			System.out.println(e1.getMessage());
 		}
 
 		return comparator;

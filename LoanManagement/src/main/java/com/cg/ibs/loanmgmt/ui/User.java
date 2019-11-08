@@ -95,7 +95,7 @@ public class User implements ExceptionMessages {
 	}
 
 	private LoanMaster selectLoanType(CustomerBean customer) throws IBSException {
-		LOGGER.info("Loan type selection");
+		LOGGER.info("Loan type selection!!!!");
 		LoanTypes choice = null;
 		LoanMaster loanMaster = null;
 		while (choice != LoanTypes.GO_BACK) {
@@ -846,7 +846,7 @@ public class User implements ExceptionMessages {
 
 		} catch (Throwable exp) {
 			System.out.println("Application Crashed!");
-			// main(args);
+			user.userLogin();
 		}
 	}
 }
